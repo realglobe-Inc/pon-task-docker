@@ -10,7 +10,7 @@ const { ok } = require('assert')
 const co = require('co')
 
 describe('define', function () {
-  this.timeout(500000)
+  this.timeout(5000000)
 
   before(() => co(function * () {
 
@@ -23,14 +23,19 @@ describe('define', function () {
   it('Define', () => co(function * () {
     let ctx = ponContext()
     let task = define({
-      mysql: [ 'some-mysql-container-name' ]
+      mysql: [ 'some-mysql-container-name' ],
+      redis: [ 'some-redis-container-name' ]
     })
     ok(task)
 
-    const { mysql } = task
+    const { mysql, redis } = task
     yield mysql.run(ctx)
     yield mysql.logs(ctx)
     yield mysql.remove(ctx)
+
+    yield redis.run(ctx)
+    yield redis.logs(ctx)
+    yield redis.remove(ctx)
   }))
 })
 

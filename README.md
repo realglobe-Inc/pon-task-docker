@@ -109,6 +109,15 @@ Define task
 | options | Object |  Optional settings |
 
 
+### `mysql(options)`
+
+Run mysql
+
+| Param | type | Description |
+| ---- | --- | ----------- |
+| options | Object |  Optional settings |
+
+
 
 <!-- Section from "doc/guides/03.Signature.md.hbs" End -->
 

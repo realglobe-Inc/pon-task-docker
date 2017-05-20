@@ -25,6 +25,7 @@
   "dependencies": {
     "adocker": "^2.0.0",
     "adocker-mysql": "^3.0.1",
+    "adocker-redis": "^1.0.1",
     "co": "^4.6.0",
     "execcli": "^4.0.11"
   },
