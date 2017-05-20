@@ -109,12 +109,23 @@ Define task
 | options | Object |  Optional settings |
 
 
-### `mysql(options)`
+### `mysql(name, options)`
 
 Run mysql
 
 | Param | type | Description |
 | ---- | --- | ----------- |
+| name | string |  Container name |
+| options | Object |  Optional settings |
+
+
+### `redis(name, options)`
+
+Run redis
+
+| Param | type | Description |
+| ---- | --- | ----------- |
+| name | string |  Container name |
 | options | Object |  Optional settings |
 
 
