@@ -10,7 +10,7 @@ const { ok } = require('assert')
 const co = require('co')
 
 describe('define', function () {
-  this.timeout(3000)
+  this.timeout(500000)
 
   before(() => co(function * () {
 
