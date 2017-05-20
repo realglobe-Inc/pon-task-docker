@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- '6'
+before_install:
+- npm i npm-cli-login -g
+- npm-cli-login -u "${NPM_USER}" -p "${NPM_PASSWORD}" -e "${NPM_EMAIL}"
+- npm who
+- sudo apt-get -o Dpkg::Options::="--force-confnew" -y update
+- sudo apt-get -o Dpkg::Options::="--force-confnew" -y install docker-engine
+install:
+- npm install jsdoc -g
+- npm install
+script:
+- ./ci/build.js
+- ./ci/shim.js
+- ./ci/test.js
+after_success:
+- ./ci/travis/publish.js
+env:
+  secure: "Zh5S1+rHiiEvomuawPPXlIS7EaUR6Z2O9d2ng+z3b6cGTnNp2jWYoGl+lSe3Od8A8yU/F5k+eZcN3JUnbrhcAZahYjGycbAkap21Bwvd/jomBcOXCI9+nFJhDNMMfzskdMKIiDKVbaVhgg/hVP4QMNH962+KCQp+gj9p0qhL7v42lD3/nB2ZlMg9E/S2izyoQkyVgfFW205F0mzzdcS7PRcTMx5/m1YFv8AqA+PwWMGEulNGJp0Kp6JN7TPv0mkPZkNhleJLyx86xVvaYtj/96c8kpKE1fS1ZbFHdxE0ruYRuiDELwUbLa2XR7JTf87rJElYw3BoAUZoLJ7GNkdYe0x38Kv50cTZkZfdX0GgBWhZd685YyN37hwFGi+CuOL1aUvIedVAfyXhhDlRlRLXmquWEXa7OuUrSWcNVzGMWxCYVjRY/rIjCdnbHS8Jq1Vg0vlX3O2t1z+gtvWDVMK2ABUxEbopZiXfEwGaDvohcZ8+iJpF/FZyfTYbYPmm74jXMCt3qYScpCoScw3rE9FwTtPS4hc1wTswy4sFU/ovaZDC/4YBvq8EOeWmooStgXhfeTgqwii7sNN294simebvD1nxjculdCMQLhKGwNU31cmnIjkrI06kDP4wAujrQ5qRpkJAjNMjP17HZTAyZbsVEHKERCIPH3KOO0yrlgdUjnw="
