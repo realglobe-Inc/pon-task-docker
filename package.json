@@ -24,8 +24,8 @@
   "homepage": "https://github.com/realglobe-Inc/pon-task-docker#readme",
   "dependencies": {
     "adocker": "^2.0.0",
-    "adocker-mysql": "^3.0.1",
-    "adocker-redis": "^1.0.1",
+    "adocker-mysql": "^3.0.3",
+    "adocker-redis": "^1.0.3",
     "asleep": "^1.0.3",
     "co": "^4.6.0",
     "execcli": "^4.0.11"
