@@ -23,10 +23,11 @@
   },
   "homepage": "https://github.com/realglobe-Inc/pon-task-docker#readme",
   "dependencies": {
-    "adocker": "^2.0.0",
-    "adocker-mysql": "^3.0.3",
-    "adocker-nginx": "^3.0.0",
-    "adocker-redis": "^1.0.3",
+    "adocker": "^2.0.1",
+    "adocker-mysql": "^3.0.4",
+    "adocker-nginx": "^4.0.0",
+    "adocker-node": "^2.0.2",
+    "adocker-redis": "^1.0.4",
     "asleep": "^1.0.3",
     "co": "^4.6.0",
     "execcli": "^4.0.11"

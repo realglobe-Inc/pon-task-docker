@@ -129,6 +129,16 @@ Run nginx
 | options | Object |  Optional settings |
 
 
+### `node(name, options)`
+
+Run node
+
+| Param | type | Description |
+| ---- | --- | ----------- |
+| name | string |  Container name |
+| options | Object |  Optional settings |
+
+
 ### `redis(name, options)`
 
 Run redis

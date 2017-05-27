@@ -25,7 +25,8 @@ describe('define', function () {
     let task = define({
       mysql: [ 'some-mysql-container-name' ],
       redis: [ 'some-redis-container-name' ],
-      nginx: [ 'some-nginx-container-name' ]
+      nginx: [ 'some-nginx-container-name' ],
+      node: [ 'some-node-container-name' ]
     })
     ok(task)
 
