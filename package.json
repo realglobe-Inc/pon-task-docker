@@ -25,8 +25,8 @@
   "dependencies": {
     "adocker": "^2.0.1",
     "adocker-mysql": "^3.0.4",
-    "adocker-nginx": "^4.0.0",
-    "adocker-node": "^2.0.2",
+    "adocker-nginx": "^4.0.1",
+    "adocker-node": "^2.0.3",
     "adocker-redis": "^1.0.4",
     "asleep": "^1.0.3",
     "co": "^4.6.0",
