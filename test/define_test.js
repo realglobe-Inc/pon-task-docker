@@ -24,7 +24,8 @@ describe('define', function () {
     let ctx = ponContext()
     let task = define({
       mysql: [ 'some-mysql-container-name' ],
-      redis: [ 'some-redis-container-name' ]
+      redis: [ 'some-redis-container-name' ],
+      nginx: [ 'some-nginx-container-name' ]
     })
     ok(task)
 

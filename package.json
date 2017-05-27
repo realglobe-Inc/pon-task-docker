@@ -1,6 +1,6 @@
 {
   "name": "pon-task-docker",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Pon task for docker",
   "main": "lib",
   "browser": "shim/browser",
@@ -25,6 +25,7 @@
   "dependencies": {
     "adocker": "^2.0.0",
     "adocker-mysql": "^3.0.3",
+    "adocker-nginx": "^3.0.0",
     "adocker-redis": "^1.0.3",
     "asleep": "^1.0.3",
     "co": "^4.6.0",
@@ -40,6 +41,9 @@
     "ape-tasking": "^4.0.9",
     "ape-tmpl": "^5.0.20",
     "ape-updating": "^4.1.0",
+    "aport": "^1.0.0",
+    "arequest": "^2.0.7",
+    "asleep": "^1.0.3",
     "coz": "^6.0.20",
     "injectmock": "^2.0.0",
     "pon-context": "^2.0.1",

@@ -119,6 +119,16 @@ Run mysql
 | options | Object |  Optional settings |
 
 
+### `nginx(name, options)`
+
+Run nginx
+
+| Param | type | Description |
+| ---- | --- | ----------- |
+| name | string |  Container name |
+| options | Object |  Optional settings |
+
+
 ### `redis(name, options)`
 
 Run redis
