@@ -1,5 +1,4 @@
 language: node_js
-sudo: required
 services:
 - docker
 node_js:
@@ -8,8 +7,6 @@ before_install:
 - npm i npm-cli-login -g
 - npm-cli-login -u "${NPM_USER}" -p "${NPM_PASSWORD}" -e "${NPM_EMAIL}"
 - npm who
-- sudo apt-get -o Dpkg::Options::="--force-confnew" -y update
-- sudo apt-get -o Dpkg::Options::="--force-confnew" -y install docker-engine
 install:
 - npm install jsdoc -g
 - npm install
