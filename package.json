@@ -28,9 +28,8 @@
     "adocker-nginx": "^4.0.1",
     "adocker-node": "^2.0.3",
     "adocker-redis": "^1.0.4",
-    "asleep": "^1.0.3",
     "co": "^4.6.0",
-    "execcli": "^4.0.11"
+    "execcli": "^5.0.0"
   },
   "devDependencies": {
     "ababel": "^2.0.1",
@@ -44,7 +43,6 @@
     "ape-updating": "^4.1.0",
     "aport": "^1.0.0",
     "arequest": "^2.0.7",
-    "asleep": "^1.0.3",
     "coz": "^6.0.20",
     "injectmock": "^2.0.0",
     "pon-context": "^2.0.1",
