@@ -6,39 +6,38 @@
 
 const define = require('../lib/define.js')
 const ponContext = require('pon-context')
-const { ok } = require('assert')
-const co = require('co')
+const {ok} = require('assert')
 
 describe('define', function () {
   this.timeout(5000000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Define', () => co(function * () {
-    let ctx = ponContext()
-    let task = define({
-      mysql: [ 'some-mysql-container-name' ],
-      redis: [ 'some-redis-container-name' ],
-      nginx: [ 'some-nginx-container-name' ],
-      node: [ 'some-node-container-name' ]
+  it('Define', async () => {
+    const ctx = ponContext()
+    const task = define({
+      mysql: ['some-mysql-container-name'],
+      redis: ['some-redis-container-name'],
+      nginx: ['some-nginx-container-name'],
+      node: ['some-node-container-name']
     })
     ok(task)
 
-    const { mysql, redis } = task
-    yield mysql.run(ctx)
-    yield mysql.logs(ctx)
-    yield mysql.remove(ctx)
+    const {mysql, redis} = task
+    await mysql.run(ctx)
+    await mysql.logs(ctx)
+    await mysql.remove(ctx)
 
-    yield redis.run(ctx)
-    yield redis.logs(ctx)
-    yield redis.remove(ctx)
-  }))
+    await redis.run(ctx)
+    await redis.logs(ctx)
+    await redis.remove(ctx)
+  })
 })
 
 /* global describe, before, after, it */

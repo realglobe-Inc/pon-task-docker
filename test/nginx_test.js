@@ -11,22 +11,22 @@ const aport = require('aport')
 const asleep = require('asleep')
 const arequest = require('arequest')
 
-const co = require('co')
+
 
 describe('nginx', function () {
   this.timeout(300000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Nginx', () => co(function * () {
+  it('Nginx', async () => {
     let ctx = ponContext()
-    let port = yield aport()
+    let port = await aport()
     let task = nginx('adocker-nginx-test-01', {
       template: `${__dirname}/../misc/mocks/nginx.conf.template`,
       staticDir: `${__dirname}/../misc/mocks/mock-public`,
@@ -36,18 +36,18 @@ describe('nginx', function () {
 
     let { run, remove, logs, stop } = task
 
-    yield run(ctx)
+    await run(ctx)
 
-    let { statusCode, body } = yield arequest(`http://localhost:${port}/index.html`)
+    let { statusCode, body } = await arequest(`http://localhost:${port}/index.html`)
     equal(statusCode, 200)
     ok(body)
 
-    yield logs(ctx)
+    await logs(ctx)
 
-    yield stop(ctx)
+    await stop(ctx)
 
-    yield remove(ctx)
-  }))
+    await remove(ctx)
+  })
 })
 
 /* global describe, before, after, it */
