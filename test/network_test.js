@@ -23,8 +23,8 @@ describe('network', function () {
     const ctx = ponContext()
     const task = network('pon-docker-test-network')
 
-    await task.create(ctx)
-    await task.create(ctx)
+    await task.run(ctx)
+    await task.run(ctx)
     await task.remove(ctx)
   })
 })
