@@ -22,21 +22,14 @@ describe('define', function () {
   it('Define', async () => {
     const ctx = ponContext()
     const task = define({
-      mysql: ['some-mysql-container-name'],
-      redis: ['some-redis-container-name'],
-      nginx: ['some-nginx-container-name'],
-      node: ['some-node-container-name']
+      name: 'pon-task-docker-test-01',
+      image: 'hello-world'
     })
     ok(task)
+    await task.run(ctx)
+    await task.logs(ctx)
+    await task.remove(ctx)
 
-    const {mysql, redis} = task
-    await mysql.run(ctx)
-    await mysql.logs(ctx)
-    await mysql.remove(ctx)
-
-    await redis.run(ctx)
-    await redis.logs(ctx)
-    await redis.remove(ctx)
   })
 })
 

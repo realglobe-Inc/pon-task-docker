@@ -1,6 +1,6 @@
 {
   "name": "pon-task-docker",
-  "version": "2.0.4",
+  "version": "3.0.0",
   "description": "Pon task for docker",
   "main": "lib",
   "browser": "shim/browser",
@@ -28,6 +28,7 @@
     "adocker-nginx": "^5.0.1",
     "adocker-node": "^2.0.4",
     "adocker-redis": "^2.0.1",
+    "asleep": "^1.0.3",
     "execcli": "^5.0.2"
   },
   "devDependencies": {
