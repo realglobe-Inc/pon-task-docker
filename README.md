@@ -121,6 +121,15 @@ Run mysql
 | options | Object |  Optional settings |
 
 
+### `network()`
+
+
+
+| Param | type | Description |
+| ---- | --- | ----------- |
+|  | string |  |
+
+
 ### `nginx(name, options)`
 
 Run nginx
