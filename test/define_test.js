@@ -21,8 +21,7 @@ describe('define', function () {
 
   it('Define', async () => {
     const ctx = ponContext()
-    const task = define({
-      name: 'pon-task-docker-test-01',
+    const task = define('pon-task-docker-test-01',{
       image: 'hello-world'
     })
     ok(task)
