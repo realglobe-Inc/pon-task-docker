@@ -111,6 +111,16 @@ Define task
 | options | Object |  Optional settings |
 
 
+### `mongo(name, options) -> function`
+
+
+
+| Param | type | Description |
+| ---- | --- | ----------- |
+| name | string |  Container name |
+| options | Object |  Optional settings |
+
+
 ### `mysql(name, options)`
 
 Run mysql
