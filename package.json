@@ -1,6 +1,6 @@
 {
   "name": "pon-task-docker",
-  "version": "3.1.9",
+  "version": "3.1.12",
   "description": "Pon task for docker",
   "main": "lib",
   "browser": "shim/browser",

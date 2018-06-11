@@ -10,8 +10,11 @@ install:
 - npm install jsdoc -g
 - npm install
 script:
-- ./ci/build.js
-- ./ci/shim.js
-- ./ci/test.js
+- "./ci/build.js"
+- "./ci/shim.js"
+- "./ci/test.js"
 after_success:
 - publish-if-needed
+env:
+  global:
+    secure: Jyfwc78irxhseEcB78LMY1cqyy4kwXw17rRv5PbLUO3UdjujlW8BonMmK7lwdh2ddci3byyt3WRBZZVtMQaQSm20eT+6ZTXXuyKtb70xor+Ba15uxk3A/jeUlVP+onabxRLFZneYM1puM2naKvgMohihkG7GZ9U7GwqcpuxFcw5TyTWy65qlJ1OePugq1Muy+QteqlzbxWzdkRWQN49GEl47F4mon39sWHaKx++92rgYuv839oATLEN8UfLzvr1kcZsPXGIp5HIepUUCJzWC3yPyMhI3lqd0aQngg71jGEgzx50T10Oe0WIaEQOn2cw+oEzoHyH20bV9RGSYQsUjaWeYr8/qEA3wa8ofYhEp5URkXMaYaymz9rhVrPMIpLxNe6yHKZNfosHqhTNfUIMpR4d6HED+1obNmQvzRJAg+uzzMFsbdpC8McCHw1CjbAmOvElCUWtOC2RqfDL611Q9Jaco6yLdAJhJhF/RNNGniT/LLPDXTOSLKtCAijXXwyCYGv/rVTwUtJ6qYktDK7RPauqDjaQDzM4vTt5FvXid1mu9LZ9hsMOze5Rpw7Aj5Fi0FFnyG3qkNjvE5zaRog5ZiPBIy3syr1vlrW44flKHcx1LY7jqFUmsOuqO7FkWQWL8+Nfwm6UlWaVi+WwGn5N7zrSGg2YlnsBv/Jz5kcGS0CQ=
