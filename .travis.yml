@@ -4,9 +4,8 @@ services:
 node_js:
 - '8'
 before_install:
-- npm i npm-cli-login -g
-- npm-cli-login -u "${NPM_USER}" -p "${NPM_PASSWORD}" -e "${NPM_EMAIL}"
-- npm who
+- echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+- npm install jsdoc publish-if-needed npm@latest -g
 install:
 - npm install jsdoc -g
 - npm install
@@ -15,6 +14,4 @@ script:
 - ./ci/shim.js
 - ./ci/test.js
 after_success:
-- ./ci/travis/publish.js
-env:
-  secure: "w+4e1lFFHQxJ7xSWp6malpKBRtvQIxUxE160TLHnzxX1TLkBMSchn38G4cJ99+iFdb7o7OGVcb13NpG2p+4csfR67+nuJXTY4vcUGf1gmeB8acItNyV9q+MKR+3Ar7LB0L+Oq+L75drMFDcAexIyZTEUTB0LPQdPdRti9y8y5zMeoM5XSMy0rdVuhCqQYgGjaF2uCZ6T4HJHYOwA5XlB2qZeNbEdK5/i/VMHS7a7kaTwJ3TbwmC2FVc37wQ+lbgkl0V6cu8qIfpAXcw5ZkfKTYbNleFdNbDnBw/87c9HiRgirh6Pa6Ig1J9mxnS3lGFmmF1n6F36+J6oe0ddvU/IZsHdizi9opRYd2ND7rVNqewmISJSUifkiM5RprPyHMsdFYGNatGKOXtE/iCSU/4/a/a2kX3Vug0b9UmN9lPYwZPcHD9DMTQa73u0Metnhdud64rDhyDfVp/xInV521vwDnwXfXL4tN5C7aHGjB9VtInrDk1+qLAB0rI2HQ0u79OiAKoUlgp3zRQB+ioDfWHLEe4VyXMIpSmnUSaPb2rqUfUubxp0YW0UYS0EnacSzJYA9YSWcUKSjo17q3xJnTpy2AQgRRKnVKZ4fWoPpUbWdBFPR7J4uT8BNPwsvATDleD8YA7U2slMmvFjxd6LCk+t4Va96HFn5n0xGlhptYs1G9o="
+- publish-if-needed
